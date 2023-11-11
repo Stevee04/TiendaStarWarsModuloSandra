@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleUser.css">
+  <title>Usuarios</title>
+</head>
+<body>
+  <div>
+    <a href="/tienda">
+      <button style="color: red; border: 2px solid red;">Home</button>
+    </a>
+  </div>
+  <div id="login-register-container">
+    <div id="login-form">
+      <form method="get" action="login.php">
+        <label>Nombre/Nick:</label>
+        <input type="text" placeholder="Nombre/nick" name="nick" /><br><br>
+        <label>Contraseña:</label>
+        <input type="password" placeholder="Contraseña" name="contraseña" /><br><br>
+        <button class="red" type="submit">Log In</button>
+        <br>
+        <p>¿No tienes una cuenta? <a href="#" id="show-register-form" type="button">Regístrate</a></p>
+      </form>
+    </div>
+    <div id="register-form" style="display: none;">
+      <form method="get" action="register.php">
+        <label>Nombre/Nick:</label>
+        <input type="text" placeholder="Nombre/nick" name="nick" /><br><br>
+        <label>Email/Correo Electronico:</label>
+        <input type="email" placeholder="Email/Correo Electronico" name="email" /><br><br>
+        <label>Contraseña:</label>
+        <input type="password" placeholder="Contraseña" name="contraseña" /><br><br>
+        <label>Confirmar Contraseña:</label>
+        <input type="password" placeholder="Confirmar Contraseña" name="contraseña2" /><br><br>
+        <button class="red" type="submit">Registrarse</button>
+        <br>
+        <p>¿Ya tienes una cuenta? <a href="#" id="show-login-form">Iniciar sesión</a></p>
+      </form>
+    </div>
+  </div>
+  <script src="User.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- echo "<tr>";
+  echo "<td>" . $fila['nick'] . "</td>";
+  echo "<td contenteditable='true' id='editEmail'>" . $fila['email'] . "</td>";
+  echo "<td contenteditable='true' id='editPassword'>" . $fila['contraseña'] . "</td>";
+  echo "<td contenteditable='true' id='admin'>
+          <button>SI</button> <button>NO</button>
+        </td>";
+  echo "<td>
+          <button onclick='guardarCambios(" . $fila['id'] . ")'>Modificar</button>
+          <button onclick='eliminarUsuario(" . $fila['id'] . ")'>Eliminar</button>
+          <button onclick='añadirUsuario()'>Añadir</button>
+      </td>";
+  echo "</tr>"; -->
+
+  <!-- echo "<tr>";
+    echo "<form method='post'>";
+    echo "<input type='hidden' name='nick_eliminar' value='" . $fila['nick'] . "'>";
+    echo "<td>" . $fila['nick'] . "</td>";
+    echo "<td contenteditable='true' id='editEmail'>" . $fila['email'] . "</td>";
+    echo "<td contenteditable='true' id='editPassword'>" . $fila['contraseña'] . "</td>";
+    echo "<td contenteditable='true' id='admin'>
+            <button>SI</button> <button>NO</button>
+          </td>";
+    echo "<td>
+            <button formaction='actualizar.php'>Modificar</button>
+            <button formaction='eliminar.php'>Eliminar</button>
+            <button formaction='crear.php'>Añadir</button>
+        </td>";
+    echo "</form>";
+    echo "</tr>"; -->
+    
+    

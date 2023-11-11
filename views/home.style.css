@@ -1,0 +1,251 @@
+body {
+  background-image: url(./imgTienda/star_wars_background.jpg);
+  background-size: cover;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.button-effect {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 20px auto;
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.image-container {
+  width: 50px;
+  height: 50px;
+  background-image: url("./imgTienda/user2.png");
+  background-size: cover;
+  transition: background-image 0.3s;
+}
+
+.image-container:hover {
+  background-image: url("./imgTienda/user1.png");
+  transition: background-image 0.3s;
+}
+
+.button-effect:hover {
+  background-color: #ffee58;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.producto {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  width: 100%;
+  max-height: 200px;
+  transition: transform 0.3s;
+}
+
+.producto img:hover {
+  transform: scale(1.1);
+}
+
+.product-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.addToCartBtn,
+.viewProductBtn {
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 5px 0;
+}
+
+.addToCartBtn:hover,
+.viewProductBtn:hover {
+  background-color: #ffee58;
+  transform: scale(1.1);
+}
+
+.userImg {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+  
+  button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .image-container {
+    width: 50px;
+    height: 50px;
+    background-image: url("./imgTienda/user2.png"); /* Imagen inicial */
+    background-size: cover;
+    transition: background-image 0.3s;
+  }
+  
+  .image-container:hover {
+    background-image: url("./imgTienda/user1.png"); /* Imagen al pasar el ratón por encima */
+    transition: background-image 0.3s;
+  }  
+
+  button:hover {
+    background-color: #ffee58;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .producto {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  .producto:hover {
+    transform: scale(1.05);
+  }
+  
+  .producto img {
+    width: 100%;
+    max-height: 200px;
+    transition: transform 0.3s;
+  }
+  
+  .producto img:hover {
+    transform: scale(1.1);
+  }
+  
+  .product-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    margin: 10px 0; /* Ajusta el margen vertical */
+  }
+  
+  .addToCartBtn,
+  .viewProductBtn {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 5px 0; /* Ajusta el margen vertical */
+  }
+  
+  .addToCartBtn:hover,
+  .viewProductBtn:hover {
+    background-color: #ffee58;
+    transform: scale(1.1);
+  }
+
+  .userImg{
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .button-effect {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-effect:hover {
+    background-color: #ffee58;
+    transform: scale(1.1);
+}
+
+.button-effect.red {
+  background-color: #ae1100;
+  color: #ffffff;
+}
+
+.button-effect.red:hover {
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+.order-buttons {
+  text-align: left; /* Alinea los botones al centro */
+}
+
+.order-buttons button {
+  display: inline-block; /* Muestra los botones en línea */
+  margin-right: 10px; /* Ajusta el margen derecho entre los botones */
+}
