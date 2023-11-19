@@ -1,7 +1,7 @@
 // Event listeners para los botones
 document.getElementById('cartBtn').addEventListener('click', () => {
   // Redirige al carrito de compras (debes implementar esta página)
-  window.location.href = 'carrito.html';
+  window.location.href = '/carrito/carrito.php';
 });
 
 document.getElementById('registerBtn').addEventListener('click', () => {

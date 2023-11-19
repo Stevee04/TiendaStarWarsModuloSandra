@@ -35,7 +35,7 @@ if(!$con){
     }else
     {
         // Verificar si el usuario ya existe
-        $verificarUsuario = "SELECT * FROM usuarios WHERE nick='$Nombre' OR email='$Email'";
+        $verificarUsuario = "SELECT * FROM usuarios WHERE nick='$Nombre'";
         $resultado = mysqli_query($con, $verificarUsuario);
 
         if (mysqli_num_rows($resultado) > 0 && $vacio != true) {

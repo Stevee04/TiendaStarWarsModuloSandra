@@ -7,23 +7,29 @@ $bd = "tienda";
 $conn = mysqli_connect($servidor, $usuario, $password, $bd);
 
 if (!$conn) {
-    die("Conexión fallida: " . mysqli_connect_error());
+  die("Conexión fallida: " . mysqli_connect_error());
 }
 
 // Manejo de la ordenación
 $order = isset($_GET['order']) ? $_GET['order'] : 'ASC';
 $orderClause = "ORDER BY `Precio unitario` $order";
-// Verificar si se ha enviado el parámetro 'order' a través de la URL
 
 // Consulta SQL para obtener productos con orden especificado
-$sql = "SELECT id, Nombre, `Precio unitario` FROM productos $orderClause";
+$sql = "SELECT id, Nombre, `Precio unitario`, Stock, Imagen FROM productos $orderClause";
 $result = $conn->query($sql);
 
+// Filtrar productos en stock
+$stockFilter = isset($_GET['stock']) ? $_GET['stock'] : '';
+if ($stockFilter == 'en_stock') {
+  $sql = "SELECT id, Nombre, `Precio unitario`, Stock, Imagen FROM productos WHERE Stock > 0 $orderClause";
+  $result = $conn->query($sql);
+}
+  
 // Mostrar productos
 if ($result->num_rows > 0) {
-    // Resto del código para mostrar productos
+  // Resto del código para mostrar productos
 } else {
-    echo 'No se encontraron productos.';
+  echo 'No se encontraron productos.';
 }
 
 // Cierre de la conexión
@@ -43,15 +49,16 @@ $conn->close();
   <header>
     <nav>
       <div class="order-buttons" style="display: flex;">
-        <form method="get" action="" >
-            <button class="button-effect" name="order" value="ASC">Ordenar de menor a mayor precio</button>
-            <button class="button-effect" name="order" value="DESC">Ordenar de mayor a menor precio</button>
+        <form method="get" action="">
+          <button class="button-effect" name="order" value="ASC">Ordenar de menor a mayor precio</button>
+          <button class="button-effect" name="order" value="DESC">Ordenar de mayor a menor precio</button>
         </form>
-        <form method="get" action="carrito/carrito.php">
-            <button id="cartBtn" class="userContainer" type="submit">Carrito de Compras</button>
+        <form method="get" action="">
+          <button class="button-effect" name="stock" value="en_stock">En Stock</button>
         </form>
-            <button id="registerBtn" class="image-container userContainer"></button>
-      </div> 
+            <button id="cartBtn" class="image-container-cart" type="submit"></button>
+            <button id="registerBtn" class="image-container-register"></button>
+      </div>
     </nav>
   </header>
 
@@ -65,7 +72,7 @@ $conn->close();
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="producto">';
                 echo '<div class="product-info">';
-                echo '<img src="./views/imgTienda/pancake.jpg" alt="' . $row['Nombre'] . '">';
+                echo '<img src="'. $row['Imagen'] .'", alt="' . $row['Nombre'] . '">';
                 echo '<h2>' . $row['Nombre'] . '</h2>';
                 echo '<h3>Precio: ' . $row['Precio unitario'] . '</h3>';
                 echo '</div>';

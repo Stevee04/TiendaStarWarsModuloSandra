@@ -22,7 +22,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'actualizarusuario') {
     $contraUsuario = $_POST['contraseña'];
 
     // Llamar a la función actualizarUsuario con el ID del usuario
-    actualizarUsuario($idUsuario, $emailUsuario, $contraUsuario, $con);
+    actualizarUsuario($idUsuario, $nickUsuario, $emailUsuario, $contraUsuario, $con);
 }else if (isset($_POST['action']) && $_POST['action'] == 'eliminarusuario') {
     // Obtener el ID del usuario
     $idUsuario = $_POST['id'];

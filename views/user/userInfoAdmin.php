@@ -110,7 +110,8 @@
     <table>
     <tr>
             <th>Nombre</th>
-            <th>Descripcion</th>
+            <th>Descripcion</th>            
+            <th>Acciones</th>
         </tr>
 
         <?php
@@ -157,6 +158,7 @@
             <th>Stock</th>
             <th>Precio Unitario</th>
             <th>Categoria</th>
+            <th>Acciones</th>
         </tr>
 
         <?php

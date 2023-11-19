@@ -39,7 +39,7 @@ h1 {
   transition: background-color 0.3s;
 }
 
-.image-container {
+.image-container-register {
   width: 50px;
   height: 50px;
   background-image: url("./imgTienda/user2.png");
@@ -47,10 +47,23 @@ h1 {
   transition: background-image 0.3s;
 }
 
-.image-container:hover {
+.image-container-register:hover {
   background-image: url("./imgTienda/user1.png");
   transition: background-image 0.3s;
 }
+
+.image-container-cart {
+  width: 50px;
+  height: 50px;
+  background-image: url("./imgTienda/ShoppingCar1.png"); /* Imagen inicial */
+  background-size: cover;
+  transition: background-image 0.3s;
+}
+
+.image-container-cart:hover {
+  background-image: url("./imgTienda/ShoppingCar2.png"); /* Imagen al pasar el ratón por encima */
+  transition: background-image 0.3s;
+}  
 
 .button-effect:hover {
   background-color: #ffee58;
@@ -124,7 +137,7 @@ h1 {
     width: 200px;
     height: 50px;
     margin: 20px auto;
-    background-color: #ffcc00;
+    background-color: transparent;
     color: black;
     border: none;
     border-radius: 5px;
@@ -133,21 +146,8 @@ h1 {
     transition: background-color 0.3s;
   }
 
-  .image-container {
-    width: 50px;
-    height: 50px;
-    background-image: url("./imgTienda/user2.png"); /* Imagen inicial */
-    background-size: cover;
-    transition: background-image 0.3s;
-  }
-  
-  .image-container:hover {
-    background-image: url("./imgTienda/user1.png"); /* Imagen al pasar el ratón por encima */
-    transition: background-image 0.3s;
-  }  
-
   button:hover {
-    background-color: #ffee58;
+    background-color: transparent;
   }
   
   .productos {
@@ -193,7 +193,7 @@ h1 {
   .viewProductBtn {
     background-color: #ffcc00;
     color: black;
-    border: none;
+    border: transparent;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
@@ -217,9 +217,9 @@ h1 {
     width: 200px;
     height: 50px;
     margin: 20px auto;
-    background-color: #ffcc00;
+    background-color: none;
     color: black;
-    border: none;
+    border: transparent;
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
